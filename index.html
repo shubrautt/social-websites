@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main center">
+        <div class="main_container center">
+            <div class="sub_container">
+
+                <div id="home">
+                    <!-- header -->
+                    <header class="center">
+                        <div class="logo">
+                            <p>SocioRack</p>
+                        </div>
+                        <div class="chat">
+                            <i class="fab fa-rocketchat"></i>
+                        </div>
+                    </header>
+
+                    <!-- posts -->
+                    <div class="post_container">
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div class="left">
+
+                            </div>
+                            <div class="right">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nav center">
+                <div class="box center">
+                    <input type="checkbox" name="" class="tab" id="">
+                    <i class="fas fa-home"></i>
+                    <p>Home</p>
+                </div>
+                <div class="box center">
+                    <input type="checkbox" name="" class="tab" id="">
+                    <i class="fas fa-globe-europe"></i>
+                    <p>Browse</p>
+                </div>
+                <div class="box center">
+                    <input type="checkbox" name="" class="tab" id="">
+                    <i class="fas fa-heart"></i>
+                    <p>Likes</p>
+                </div>
+                <div class="box center">
+                    <input type="checkbox" name="" class="tab" id="">
+                    <i class="fas fa-user-circle"></i>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tab = document.querySelectorAll(".tab");
+
+        tab.forEach((e)=>{
+            e.addEventListener("click",(event)=>{
+                tab.forEach((e)=>{
+                    e.checked = false;
+                })
+                event.target.checked = true;
+            });
+        });
+
+    </script>
+
+</body>
+</html>
