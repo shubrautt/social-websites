@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -14,21 +15,20 @@ body{
     background: #8E2DE2;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 .main{
     height: 100vh;
 }
 .main_container{
     width: 300px;
-    height: 550px;
+    height: 600px;
     background: white;
     border-radius: 30px;
     position: relative;
 }
 .sub_container{
     width: 280px;
-    height: 540px;
+    height: 590px;
     /* background: rgb(228, 71, 71); */
     border-radius: 30px;
     /* position: relative;
@@ -114,6 +114,7 @@ input:checked ~ p{
 header .logo p{
     font-weight: 100;
     font-size: 1.2rem;
+     font-family: 'Pacifico', cursive;
 }
 header .chat i{
     font-weight: 100;
@@ -129,19 +130,58 @@ header .chat i:hover{
 /* posts */
 .post_container{
     width: 280px;
-    height: 430px;
+    height: 490px;
     /* background: #8E2DE2; */
     position: relative;
     margin-top: 10px;
+    padding-bottom: 60px;
     overflow-x: auto;
+    display: none;
+}
+.active{
+    display: block;
 }
 .post_container::-webkit-scrollbar{
     width: 0;
 }
 .post{
-    background: #e84545;
+    /* background: #e84545; */
     width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
+    /* height: 200px; */
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    position: relative;
+    display: flex;
     border-radius: 10px;
+    justify-content: center;
+}
+.post img{
+    width: 100%;
+    border-radius: 10px;
+}
+.post_footer{
+    width: 95%;
+    position: absolute;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.89);
+    padding: 8px 0;
+    border-radius: 10px 10px ;
+    justify-content: space-around;
+}
+.post_footer img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+.post_footer p{
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgb(180, 180, 180);
+    margin-left: 6px;
+}
+.post_footer i{
+    font-size: 1.2rem;
+    color: rgb(180, 180, 180);
+    margin: 6px;
+    cursor: pointer;
 }

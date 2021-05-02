@@ -12,7 +12,7 @@
         <div class="main_container center">
             <div class="sub_container">
 
-                <div id="home">
+                <div id="home" >
                     <!-- header -->
                     <header class="center">
                         <div class="logo">
@@ -24,53 +24,89 @@
                     </header>
 
                     <!-- posts -->
-                    <div class="post_container">
+                    <div class="post_container containers active" >
                         <div class="post">
-                            <div class="left">
-
-                            </div>
-                            <div class="right">
-
+                            <img src="https://picsum.photos/id/25/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="post">
-                            <div class="left">
-
-                            </div>
-                            <div class="right">
-
-                            </div>
-                        </div>
-                        <div class="post">
-                            <div class="left">
-
-                            </div>
-                            <div class="right">
-
+                            <img src="https://picsum.photos/id/125/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="post">
-                            <div class="left">
-
-                            </div>
-                            <div class="right">
-
-                            </div>
-                        </div>
-                        <div class="post">
-                            <div class="left">
-
-                            </div>
-                            <div class="right">
-
+                            <img src="https://picsum.photos/id/95/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="post">
-                            <div class="left">
-
+                            <img src="https://picsum.photos/id/85/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
-                            <div class="right">
-
+                        </div>
+                        <div class="post">
+                            <img src="https://picsum.photos/id/75/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <img src="https://picsum.photos/id/50/280" alt="" srcset="">
+                            <div class="post_footer center">
+                                <div class="center">
+                                    <img src="pr.jpg" alt="" srcset="">
+                                    <p>@sr.44_</p>
+                                </div>
+                                <div class="center">
+                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment-dots"></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,22 +115,22 @@
             </div>
             <div class="nav center">
                 <div class="box center">
-                    <input type="checkbox" name="" class="tab" id="">
+                    <input type="checkbox" name="" class="tab" id="" checked value="home"> 
                     <i class="fas fa-home"></i>
                     <p>Home</p>
                 </div>
                 <div class="box center">
-                    <input type="checkbox" name="" class="tab" id="">
+                    <input type="checkbox" name="" class="tab" id="" value="Browse">
                     <i class="fas fa-globe-europe"></i>
                     <p>Browse</p>
                 </div>
                 <div class="box center">
-                    <input type="checkbox" name="" class="tab" id="">
+                    <input type="checkbox" name="" class="tab" id="" value="Likes">
                     <i class="fas fa-heart"></i>
                     <p>Likes</p>
                 </div>
                 <div class="box center">
-                    <input type="checkbox" name="" class="tab" id="">
+                    <input type="checkbox" name="" class="tab" id="" value="Profile">
                     <i class="fas fa-user-circle"></i>
                     <p>Profile</p>
                 </div>
@@ -104,15 +140,28 @@
 
     <script>
         const tab = document.querySelectorAll(".tab");
+        const containers = document.querySelectorAll(".containers");
 
         tab.forEach((e)=>{
             e.addEventListener("click",(event)=>{
                 tab.forEach((e)=>{
                     e.checked = false;
-                })
+                });
+                containers.forEach((e)=>{
+                    e.classList.remove("active");
+                });
                 event.target.checked = true;
+                if(event.target.value == "home"){
+                    containers.forEach((e)=>{
+                        if(e.classList.contains("post_container")){
+                            e.classList.add("active");
+                        }
+                    });
+                }
             });
         });
+
+
 
     </script>
 
